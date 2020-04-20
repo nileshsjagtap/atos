@@ -13,9 +13,9 @@ object Ellipse {
     } yield Ellipse(validXCordinate, validYCordinate, validHd, validVd)
   }
 
-  private def validateXCordinate= (xCordinate: Int, canvas: Canvas) => Either.cond(xCordinate < canvas.upperXCordinate, xCordinate, InvalidXCordinate)
+  private def validateXCordinate= (xCordinate: Int, canvas: Canvas) => Either.cond(xCordinate <= canvas.upperXCordinate, xCordinate, InvalidXCordinate)
 
-  private def validateYCordinate= (yCordinate: Int, canvas: Canvas) => Either.cond(yCordinate < canvas.upperYCordinate, yCordinate, InvalidYCordinate)
+  private def validateYCordinate= (yCordinate: Int, canvas: Canvas) => Either.cond(yCordinate <= canvas.upperYCordinate, yCordinate, InvalidYCordinate)
 
   private def validateHorizontalDiameter= (validHd: Int) => Either.cond(validHd > 0, validHd, invalidHd)
 

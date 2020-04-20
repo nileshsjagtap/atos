@@ -11,8 +11,8 @@ object Canvas {
     } yield new Canvas(validUpperXCordinate, validUpperYCordinate)
   }
 
-  private def validateUpperXCordinate = (upperXCordinate: Int) => Either.cond(upperXCordinate > 0, upperXCordinate, InvalidCanvasXCordinate)
+  private def validateUpperXCordinate = (upperXCordinate: Int) => Either.cond(upperXCordinate <= 1000, upperXCordinate, InvalidCanvasXCordinate)
 
-  private def validateUpperYCordinate = (upperYCordinate: Int) => Either.cond(upperYCordinate > 0, upperYCordinate, InvalidCanvasYCordinate)
+  private def validateUpperYCordinate = (upperYCordinate: Int) => Either.cond(upperYCordinate <= 1000, upperYCordinate, InvalidCanvasYCordinate)
 
 }
