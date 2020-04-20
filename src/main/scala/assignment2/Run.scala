@@ -1,5 +1,7 @@
 package assignment2
 
+import assignment1.FileWriter
+
 object Run extends App {
 
   for {
@@ -10,6 +12,8 @@ object Run extends App {
     circle <- Circle(1, 1, 300, canvas)
     textBox <- TextBox(5, 5, 200, 100, canvas, "sample text")
     bill <- MaterialBill[BuilderSystem.type](List(rectangle, square, ellipse, circle, textBox))
-  } yield println(bill)
+  } yield {
+    FileWriter.write(bill,"src/main/scala/assignment2/output")
+  }
 
 }

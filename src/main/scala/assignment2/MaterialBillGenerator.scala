@@ -25,8 +25,11 @@ object MaterialBillGenerator {
 }
 
 case class OutPutForBuilder(op: Either[Error, List[String]]) {
+
+  val commonString = "---------------------------------" + "\n" + "Bill Of Materials" + "\n" + "--------------------------------- "
+
   def outputString = op match {
-    case Right(value) => Right(value.foldLeft("")((acc, y) => acc + "\n" + y))
+    case Right(value) => Right(value.foldLeft(commonString)((acc, y) => acc + "\n" + y))
     case Left(err) => Left(err)
   }
 }
