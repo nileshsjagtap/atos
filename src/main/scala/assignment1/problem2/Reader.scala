@@ -1,4 +1,4 @@
-package assignment1.Problem2
+package assignment1.problem2
 
 import scala.io.Source
 import scala.util.{Failure, Success, Try}

@@ -1,4 +1,4 @@
-package assignment1.Problem2
+package assignment1.problem2
 
 case class Player(val name: String, val cards: List[Card])
 

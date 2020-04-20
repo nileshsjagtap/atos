@@ -1,4 +1,4 @@
-package assignment1.Problem3
+package assignment1.problem3
 
 import assignment1.FileWriter
 

@@ -1,4 +1,4 @@
-package assignment1.Problem2
+package assignment1.problem2
 
 sealed abstract class Rank {
   def get = this.toString
